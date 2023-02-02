@@ -1,0 +1,40 @@
+{
+  "dependencies": {
+    "axios": "^1.2.5",
+    "bcrypt": "^5.1.0",
+    "connect-mongo": "^3.2.0",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "helmet": "^6.0.1",
+    "mongoose": "^6.8.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.20",
+    "noty": "^3.2.0-beta-deprecated",
+    "path": "^0.12.7",
+    "router": "^1.3.7",
+    "socket.io": "^4.5.4"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "name": "loginhtml",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/armanjeet/login.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/armanjeet/login/issues"
+  },
+  "homepage": "https://github.com/armanjeet/login#readme",
+  "description": "",
+  "devDependencies": {
+    "laravel-mix": "^6.0.49"
+  }
+}

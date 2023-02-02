@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            height: 100vh;
+            font: 1.6rem helvetica, Arial;
+            margin: 0;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #f08040;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas: 'header'
+                'main'
+                'footer';
+            grid-template-columns: 1fr;
+            grid-template-rows: 5rem 1fr 5rem;
+            height: 100%;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #203040;
+            color: whitesmoke;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+        }
+
+        header a {
+            color: white;
+            font-size: bold;
+            text-decoration: none;
+        }
+
+        header a:hover {
+            color: #f08040;
+        }
+
+        .brand a {
+            font-size: 3rem;
+        }
+
+        footer {
+            background-color: #203040;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        /* products */
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            justify-content: center;
+        }
+
+        .products li {
+            flex: 0 1 30rem;
+            margin: 1rem;
+            margin-bottom: 0;
+            height: 42rem;
+            border-top: 0.2rem #e0e0e0 solid;
+        }
+
+        .product {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+        }
+
+        .product img {
+            max-height: 26rem;
+            max-width: 22rem;
+            margin-top: 2rem;
+        }
+
+        .product-name {
+            line-height: 2.2rem;
+        }
+
+        .product-brand {
+            font-size: 1.2rem;
+            color: #808080;
+        }
+
+        .product-price {
+            font-size: 2rem;
+        }
+
+        .counter {
+
+            width: 75px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .counter input {
+            width: 30px;
+            border: 0;
+            line-height: 20px;
+            font-size: 10px;
+            text-align: center;
+            background: #0052cc;
+            color: #fff;
+            appearance: none;
+            outline: 0;
+        }
+
+        .counter span {
+            display: block;
+            font-size: 15px;
+            padding: 0 10px;
+            cursor: pointer;
+            color: #0052cc;
+            user-select: none;
+        }
+       a{
+            margin-right: 15px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <header>
+            <div class="brand">
+                <a>JsWebsite</a>
+            </div>
+            <div>
+                <a href="/signup">Sign-In</a>
+
+                <a class="cart-counter" href="/Cart">Cart</a>
+
+                <a href="/productDetails">Seller's Account</a>
+                <a href="/userDetails">Address</a>
+            </div>
+        </header>
+        <% items.forEach(function(image) { %>
+            <form action="/product/<%= image._id %>/addCart" method="POST">
+                <main id="main-container">
+                    <ul class="products">
+                        <li>
+                            <div class="product">
+                                <a href="/cart/id">
+                                    <img src="data:image/<%=image.img.contentType%>;base64,
+                <%=image.img.data.toString('base64')%>">
+                                </a>
+                                <div class="product-name">
+                                    <a>
+                                        <%= image.productName %>
+                                    </a>
+                                </div>
+                                <div class="product-name">
+                                    <a>
+                                        <%= image.desc %>
+                                    </a>
+                                </div>
+                                <div class="product-brand">
+                                    <%= image.productCatogary %>
+                                </div>
+
+                                <div class="product-price" name="product">
+                                    $<%= image.price %>
+                                </div>
+                                <button href="/product/<%= image._id %>/addCart"
+                                    data-product="<%=JSON.stringify(image)%>" class="add-to-cart"><i class="bi bi-bag">
+                                    </i>Add to Cart</button>
+                                <div class="counter">
+                                    <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                                    <input type="text" value="0">
+                                    <span class="up" onClick='increaseCount(event, this)'>+</span>
+                                </div>
+
+
+                            </div>
+                        </li>
+                    </ul>
+            </form>
+            <% }) %>
+                </main>
+                <footer>
+                    all rights reserved @2022
+                </footer>
+    </div>
+    <script>
+
+
+
+    </script>
+</body>
+
+</html>
+
+</body>
+
+</html>

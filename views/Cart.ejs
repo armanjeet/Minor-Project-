@@ -1,0 +1,181 @@
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom right, #E3F0FF, #FAFCFF);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Cart-Container {
+        width: 70%;
+        height: 85%;
+        background-color: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0px 25px 40px #1687d933;
+    }
+
+    .Header {
+        margin: auto;
+        width: 90%;
+        height: 15%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Heading {
+        font-size: 20px;
+        font-family: ‘Open Sans’;
+        font-weight: 700;
+        color: #2F3841;
+    }
+
+    .Action {
+        font-size: 14px;
+        font-family: ‘Open Sans’;
+        font-weight: 600;
+        color: #E44C4C;
+        cursor: pointer;
+        border-bottom: 1px solid #E44C4C;
+    }
+
+    .Cart-Items {
+        margin: auto;
+        width: 90%;
+        height: 30%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .image-box {
+        width: 15%;
+        text-align: center;
+    }
+
+    .about {
+        height: 100%;
+    }
+
+    .title {
+        padding-top: 5px;
+        line-height: 10px;
+        font-size: 32px;
+        font-family: ‘Open Sans’;
+        font-weight: 800;
+        color: #202020;
+    }
+
+    .subtitle {
+        line-height: 10px;
+        font-size: 18px;
+        font-family: ‘Open Sans’;
+        font-weight: 600;
+        color: #909090;
+    }
+
+    .counter {
+        width: 15%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #d9d9d9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-family: ‘Open Sans’;
+        font-weight: 900;
+        color: #202020;
+        cursor: pointer;
+    }
+
+    .count {
+        font-size: 20px;
+        font-family: ‘Open Sans’;
+        font-weight: 900;
+        color: #202020;
+    }
+
+    .prices {
+        height: 100%;
+        text-align: right;
+    }
+
+    .amount {
+        padding-top: 20px;
+        font-size: 26px;
+        font-family: ‘Open Sans’;
+        font-weight: 800;
+        color: #202020;
+    }
+
+    .save {
+        padding-top: 5px;
+        font-size: 14px;
+        font-family: ‘Open Sans’;
+        font-weight: 600;
+        color: #1687d9;
+        cursor: pointer;
+    }
+
+    .remove {
+        padding-top: 5px;
+        font-size: 14px;
+        font-family: ‘Open Sans’;
+        font-weight: 600;
+        color: #E44C4C;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    
+    <div class=”Cart-Container”>
+        <div class=”Header”>
+            <h3 class=”Heading”>Shopping Cart</h3>
+            <h5 class=”Action”>Remove all</h5>
+        </div>
+        <div class=”Cart-Items”>
+            <div class=”image-box”>
+                <img src="" ,style="120px" />
+            </div>
+            <div class=”about”>
+                <h1 class=”title”>
+                    Long Sleeve Denim Shirt
+                </h1>
+
+            </div>
+            <div class=”counter”></div>
+            <div class=”prices”></div>
+        </div>
+        <div class=”prices”>
+            <div class=”amount”>
+                $67
+            </div>
+            <div class=”save”><u>Save for later</u></div>
+            <div class=”remove”><u>Remove</u></div>
+        </div>
+        <hr>
+        <div class=”checkout”>
+            <div class=”total”>
+                <div>
+                    <div class=”Subtotal”>Sub-Total</div>
+                    <div class=”items”>1 item</div>
+                </div>
+                <div class=”total-amount”>$67</div>
+            </div>
+            <button class=”button”>Checkout</button>
+        </div>
+    </div>
+
+</body>
